@@ -1,28 +1,40 @@
 <template>
   <div class="dashboard">
     <Header />
-    <div class="dashboard__content"></div>
+    <div class="dashboard__content">
+      <Sidebar />
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue';
+import Sidebar from '@/components/Sidebar.vue';
 
 export default {
   name: 'dashboard',
   components: {
-    Header
+    Header,
+    Sidebar
   }
 };
 </script>
 
 <style lang="scss">
 .dashboard {
-  min-height: 100%;
+  height: 100%;
   background-color: $ash;
+  position: relative;
   &__content {
-    padding: 40px 50px 0 20px;
+    padding: 40px 50px 0 30px;
     min-height: 100%;
+    position: relative;
+    margin-top: 50px;
+    .content {
+      margin-left: 310px;
+      padding-top: 10px;
+    }
   }
 }
 </style>

@@ -44,6 +44,10 @@ export default {};
 .logo {
   letter-spacing: 4px;
 }
+.md-toolbar.md-theme-default {
+  position: fixed;
+  top: 0;
+}
 
 .md-toolbar-row {
   padding: 0 50px;
